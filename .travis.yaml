@@ -1,0 +1,26 @@
+language: python
+
+cache: pip
+
+env:
+  global:
+    - DEPENDS="requirements.txt"
+    - COVERAGE=1
+
+python:
+  - 3.5
+  - 3.6
+  - 3.7
+
+before_install:
+  - virtualenv --python=python venv
+  - source venv/bin/activate
+  - python --version
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+install:
+  - python setup.py install
+
+after_success:
+  - if [ "${COVERAGE}" == "1" ]; then coveralls; fi
