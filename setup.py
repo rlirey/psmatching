@@ -12,7 +12,7 @@ AUTHOR_EMAIL = 'ireyx001@umn.edu'
 URL = 'http://www.github.com/rlirey/psmatching'
 LICENSE = 'Apache 2.0 License'
 DOWNLOAD_URL = 'http://www.github.com/rlirey/psmatching'
-VERSION = '0.1.dev12'
+VERSION = '0.1.dev16'
 PYTHON_VERSION = (3, 5)
 
 
