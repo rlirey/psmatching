@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/rlirey/psmatching.svg?branch=master)](https://travis-ci.org/rlirey/psmatching)
-[![Coverage Status](https://coveralls.io/repos/github/rlirey/psmatching/badge.svg?branch=master)](https://coveralls.io/github/rlirey/psmatching?branch=mast)
+[![Coverage Status](https://coveralls.io/repos/github/rlirey/psmatching/badge.svg?branch=mast)](https://coveralls.io/github/rlirey/psmatching?branch=mast)
 
 # psmatching
 
