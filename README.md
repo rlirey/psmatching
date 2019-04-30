@@ -3,4 +3,4 @@
 
 # psmatching
 
-`psmatching` is a package for propensity score matching in Python 3.
+`psmatching` is a package for propensity score matching in Python 3. More info coming soon!
