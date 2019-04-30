@@ -1,6 +1,39 @@
+# PSMatching
+
 [![Build Status](https://travis-ci.org/rlirey/psmatching.svg?branch=master)](https://travis-ci.org/rlirey/psmatching)
 [![Coverage Status](https://coveralls.io/repos/github/rlirey/psmatching/badge.svg?branch=master)](https://coveralls.io/github/rlirey/psmatching?branch=master)
 
-# psmatching
+Ryan L. Irey, M.A., M.S.
+Insititute for Health Informatics
+University of Minnesota
 
-`psmatching` is a package for propensity score matching in Python 3. More info coming soon!
+### Features
+`psmatching` is a package for implementing propensity score matching in Python 3.
+
+The following functionality is included in the package:
+  - Calculation of propensity scores based on a specified model
+  - Matching of _k_ controls to each treatment case
+  - Evaluation of the matching process using statistical methods
+
+### Technology
+
+`psmatching` uses a number of open source projects to work properly:
+
+* [`pandas`](https://pandas.pydata.org/)
+* [`numpy`](https://www.numpy.org/)
+* [`scipy`](https://www.scipy.org/)
+* [`statsmodels`](https://www.statsmodels.org/stable/index.html)
+
+`psmatching` itself is open source with a [public repository](https://github.com/rlirey/psmatching) on GitHub.
+
+### Installation
+Install `psmatching` via `pip`
+```sh
+$ pip install psmatching
+```
+### Example
+Coming soon!
+
+### License
+Apache 2.0
+
