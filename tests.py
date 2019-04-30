@@ -3,7 +3,7 @@ import psmatching.match as psm
 import pytest
 
 
-file = "/Users/ireyx001/GoogleDrive/IHI/PAC/code/simMATCH.csv"
+file = "simMATCH.csv"
 model = "CASE ~ AGE + TOTAL_YRS"
 k = "3"
 
