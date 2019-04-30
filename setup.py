@@ -12,36 +12,19 @@ AUTHOR_EMAIL = 'ireyx001@umn.edu'
 URL = 'http://www.github.com/rlirey/psmatching'
 LICENSE = 'Apache 2.0 License'
 DOWNLOAD_URL = 'http://www.github.com/rlirey/psmatching'
-VERSION = '0.1dev'
+VERSION = '0.1.dev11'
 PYTHON_VERSION = (3, 5)
 
 
 INSTALL_REQUIRES = [
     'numpy',
     'pandas',
-    'dask[complete]',
     'scipy',
     'statsmodels'
 ]
 
 
-def write_version_py(filename='psmatching/version.py'):
-    template = """# THIS FILE IS GENERATED FROM THE psmatching setup.py version='%s'"""
-
-    try:
-        fname = os.path.join(os.path.dirname(__file__), filename)
-        with open(fname, 'w') as f:
-            f.write(template % VERSION)
-    except IOError:
-        raise IOError("Could not open/write to psmatching/version.py - did you "
-                      "install using sudo in the past? If so, run\n"
-                      "sudo chown -R your_username ./*\n"
-                      "from package root to fix permissions, and try again.")
-
-
 if __name__ == "__main__":
-
-    write_version_py()
 
     from setuptools import setup
     setup(
@@ -60,11 +43,8 @@ if __name__ == "__main__":
             'Environment :: Console',
             'Intended Audience :: Developers',
             'Intended Audience :: Science/Research',
-            'License :: OSI Approved :: Apache 2.0 License',
-            'Programming Language :: Python',
-            'Programming Language :: Python :: 3.5',
-            'Programming Language :: Python :: 3.6',
-            'Programming Language :: Python :: 3.7',
+            'License :: OSI Approved :: Apache Software License',
+            'Programming Language :: Python :: 3',
             'Topic :: Scientific/Engineering',
             'Operating System :: Microsoft :: Windows',
             'Operating System :: POSIX',
