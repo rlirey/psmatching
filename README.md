@@ -36,6 +36,9 @@ $ pip install psmatching
 ### Example
 Coming soon!
 
+### Documentation
+Coming soon!
+
 ### License
 Apache 2.0
 
