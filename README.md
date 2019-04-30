@@ -4,7 +4,9 @@
 [![Coverage Status](https://coveralls.io/repos/github/rlirey/psmatching/badge.svg?branch=master)](https://coveralls.io/github/rlirey/psmatching?branch=master)
 
 Ryan L. Irey, M.A., M.S.
+
 Insititute for Health Informatics
+
 University of Minnesota
 
 ### Features
