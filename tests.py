@@ -28,8 +28,8 @@ def test_match():
     assert not m.matched_data.empty
 
 
-def test_eval():
-    global m
-    m.prepare_data()
-    m.match()
-    assert m.evaluate()
+# def test_eval():
+#     global m
+#     m.prepare_data()
+#     m.match()
+#     assert m.evaluate()
