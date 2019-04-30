@@ -21,6 +21,6 @@ before_install:
 install:
   - python setup.py install
  
-script: pytest tests.py --cov=psmatching/
+script: pytest tests.py --cov=/psmatching/
 after_success:
   - if [ "${COVERAGE}" == "1" ]; then coveralls; fi
