@@ -160,9 +160,10 @@ class PSMatch(object):
 
         if True in [i < 0.05 for i in results.values()]:
             print("\n\t\tAt least one variable failed to match!")
+            return False
         else:
             print("\n\t\tAll variables were successfully matched!")
-
+            return True
 
 
 
