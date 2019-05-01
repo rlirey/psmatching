@@ -13,9 +13,7 @@ PSMatching
 
 
 Ryan L. Irey, M.A., M.S.
-
 Insititute for Health Informatics
-
 University of Minnesota
 
 Features
@@ -36,7 +34,7 @@ Technology
 ``psmatching`` uses a number of open source projects to work properly:
 
 
-* `\ ``pandas`` <https://pandas.pydata.org/>`_
+* .. _``pandas`` <https://pandas.pydata.org/>
 * `\ ``numpy`` <https://www.numpy.org/>`_
 * `\ ``scipy`` <https://www.scipy.org/>`_
 * `\ ``statsmodels`` <https://www.statsmodels.org/stable/index.html>`_
