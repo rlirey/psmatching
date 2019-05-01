@@ -2,15 +2,15 @@ import psmatching.match as psm
 import pytest
 
 
-file = "simMATCH.csv"
+path = "simMATCH.csv"
 model = "CASE ~ AGE + TOTAL_YRS"
 k = "3"
 
-m = psm.PSMatch(file, model, k)
+m = psm.PSMatch(path, model, k)
 
 
 def test_class():
-    assert m.file
+    assert m.path
     assert m.model
     assert m.k
 
