@@ -40,7 +40,7 @@ Coming soon!
 Coming soon!
 
 ### Acknowledgments
-Parts of this package's source code are modified from Kellie Otto's pscore-match package. More info on that package can be found [here](http://www.kellieottoboni.com/pscore_match/)
+Parts of this package's source code are modified from Kellie Otto's pscore-match package. More info on that package can be found [here](http://www.kellieottoboni.com/pscore_match/).
 
 ### License
 Apache 2.0
