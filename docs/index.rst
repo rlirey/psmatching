@@ -57,6 +57,7 @@ Usage
 .. code-block:: py
 
    >>> m = PSMatch(path, model, k)
+   >>> m.prepare_data()
 
 
 License
