@@ -26,6 +26,8 @@ The following functionality is included in the package:
 
 * Calculation of propensity scores based on a specified model
 * Matching of *k* controls to each treatment case
+* Use of a caliper to control the maximum difference between propensity scores
+* Matching with or without replacement
 * Evaluation of the matching process using statistical methods
 
 Technology
@@ -52,7 +54,9 @@ Install ``psmatching`` via ``pip``
 Usage
 ^^^^^^^
 
-Coming soon!
+.. code-block:: py
+
+   >>> m = PSMatch(file, model, k)
 
 
 License
