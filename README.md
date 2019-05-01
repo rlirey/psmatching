@@ -38,7 +38,8 @@ $ pip install psmatching
 Coming soon!
 
 ### Documentation
-Coming soon!
+Documentation for this package can be found [here](https://psmatching.readthedocs.io/en/latest/).
+Documentation is currently under construction!
 
 ### Acknowledgments
 Parts of this package's source code are modified from Kellie Otto's pscore-match package. More info on that package can be found [here](http://www.kellieottoboni.com/pscore_match/).
