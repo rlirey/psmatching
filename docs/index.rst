@@ -56,7 +56,7 @@ Usage
 
 .. code-block:: py
 
-   >>> m = PSMatch(file, model, k)
+   >>> m = PSMatch(path, model, k)
 
 
 License
