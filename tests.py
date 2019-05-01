@@ -28,6 +28,13 @@ def test_match():
     assert not m.matched_data.empty
 
 
+def test_match2():
+    global m
+    m.match(caliper = 0.005, replace = True)
+    assert not m.matches.empty
+    assert not m.matched_data.empty
+
+
 def test_eval():
     global m
     m.prepare_data()
