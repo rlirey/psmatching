@@ -17,7 +17,9 @@ PSMatching
 
 
 Ryan L. Irey, M.A., M.S.
+
 Insititute for Health Informatics
+
 University of Minnesota
 
 Features
