@@ -39,8 +39,7 @@ The following functionality is included in the package:
 Technology
 ^^^^^^^^^^
 
-``psmatching`` uses a number of open source projects to work properly:
-
+``psmatching`` requires a number of open source projects to work properly:
 
 * `Pandas <https://pandas.pydata.org/>`_
 * `Numpy <https://www.numpy.org/>`_
