@@ -22,6 +22,8 @@ Insititute for Health Informatics
 
 University of Minnesota
 
+ireyx001@umn.edu
+
 Features
 ^^^^^^^^
 
@@ -56,15 +58,11 @@ Install ``psmatching`` via ``pip``
 
    $ pip install psmatching
 
-Example
+Usage
 ^^^^^^^
 
 Coming soon!
 
-Documentation
-^^^^^^^^^^^^^
-
-Coming soon!
 
 License
 ^^^^^^^
