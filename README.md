@@ -1,7 +1,7 @@
-# PSMatching
-
 [![Build Status](https://travis-ci.org/rlirey/psmatching.svg?branch=master)](https://travis-ci.org/rlirey/psmatching)
 [![Coverage Status](https://coveralls.io/repos/github/rlirey/psmatching/badge.svg?branch=master)](https://coveralls.io/github/rlirey/psmatching?branch=master)
+
+# PSMatching
 
 Ryan L. Irey, M.A., M.S.
 
