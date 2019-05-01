@@ -38,10 +38,13 @@ Technology
 ``psmatching`` uses a number of open source projects to work properly:
 
 
-* Pandas_  .. _Pandas: https://pandas.pydata.org/
-* Numpy_  .. _Numpy: https://www.numpy.org/
-* Scipy_  .. _Scipy: https://www.scipy.org/
-* StatsModels_  .. _StatsModels: https://www.statsmodels.org/stable/index.html
+* `Pandas <https://pandas.pydata.org/>`_.
+* Numpy_  
+.. _Numpy: https://www.numpy.org/
+* Scipy_  
+.. _Scipy: https://www.scipy.org/
+* StatsModels_  
+.. _StatsModels: https://www.statsmodels.org/stable/index.html
 
 ``psmatching`` itself is open source with a `public repository <https://github.com/rlirey/psmatching>`_ on GitHub.
 
