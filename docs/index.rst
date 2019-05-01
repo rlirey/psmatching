@@ -57,10 +57,13 @@ Usage
 .. code-block:: py
 
    >>> m = PSMatch(path, model, k)
+   
    >>> # Calculate propensity scores and prepare data for matching
    >>> m.prepare_data()
+   
    >>> # Perform matching
    >>> m.match(caliper = None, replace = False)
+   
    >>> # Evaluate matches via chi-square test
    >>> m.evaluate()
 
