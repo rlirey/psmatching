@@ -16,14 +16,6 @@ PSMatching
    :alt: Documentation Status
 
 
-Ryan L. Irey, M.A., M.S.
-
-Insititute for Health Informatics
-
-University of Minnesota
-
-ireyx001@umn.edu
-
 Features
 ^^^^^^^^
 
