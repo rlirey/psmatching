@@ -138,19 +138,19 @@ def flatten_match_ids(df):
     return master_list
 
 
-def write_data(file, df):
+def write_matched_data(path, df):
     '''
     Writes matched data to file.
 
     Parameters
     ----------
-    file : string
+    path : string
         a file path used to derive the saved file path
     df : Pandas Dataframe
         the dataframe to be written to file.
     '''
-    print("\nWriting data to file ...", end = " ")
-    save_file = file.split(".")[0] + "_matched_ps.csv"
+    print("Writing matched data to file ...", end = " ")
+    save_file = path.split(".")[0] + "_matched_ps.csv"
     df.to_csv(save_file, index = False)
     print("DONE!")
     print()

@@ -20,8 +20,8 @@ class PSMatch(object):
         The number of controls to be matched to each treated case.
     '''
 
-    def __init__(self, file, model, k):
-        self.file = file
+    def __init__(self, path, model, k):
+        self.path = path
         self.model = model
         self.k = int(k)
 
@@ -32,7 +32,7 @@ class PSMatch(object):
 
         Parameters
         ----------
-        file : string
+        path : string
             The file path of the data to be analyzed. Assumed to be in .csv format.
 
         Returns
@@ -40,18 +40,20 @@ class PSMatch(object):
         A Pandas DataFrame containing raw data plus a column of propensity scores.
         '''
         # Read in the data specified by the file path
-        df = pd.read_csv(self.file)
+        df = pd.read_csv(self.path)
         df = df.set_index("OPTUM_LAB_ID")
         # Obtain propensity scores and add them to the data
-        print("\nGetting propensity scores ...", end = " ")
+        print("\nCalculating propensity scores ...", end = " ")
         propensity_scores = get_propensity_scores(model = self.model, data = df, verbose = False)
         print("DONE!")
+        print("Preparing data ...", end = " ")
         df["PROPENSITY"] = propensity_scores
         # Assign the df attribute to the Match object
         self.df = df
+        print("DONE!")
 
 
-    def match(self, **kwargs):
+    def match(self, caliper = None, replace = False, **kwargs):
         '''
         Performs propensity score matching.
 
@@ -91,23 +93,32 @@ class PSMatch(object):
         k = int(self.k)
 
         # Match treatment cases to controls based on propensity score differences
-        print("\nRunning match algorithm ... ", end = " ")
+        print("\nMatching [" + str(k) + "] controls to each case ... ", end = " ")
         for m in m_order:
             # Calculate all propensity score differences
             dist = abs(g1[m]-g2)
             array = np.array(dist)
             # Choose the k smallest differences
             k_smallest = np.partition(array, k)[:k].tolist()
-            keep = np.array(dist[dist.isin(k_smallest)].index)
+            if caliper:
+                caliper = float(caliper)
+                keep_diffs = [i for i in k_smallest if i <= caliper]
+                keep_ids = np.array(dist[dist.isin(keep_diffs)].index)
+            else:
+                keep_ids = np.array(dist[dist.isin(k_smallest)].index)
 
             # Break ties via random choice, if ties are present
-            if len(keep):
-                matches[m] = list(np.random.choice(keep, k, replace=False))
+            if len(keep_ids) > k:
+                matches[m] = list(np.random.choice(keep_ids, k, replace=False))
+            elif len(keep_ids) < k:
+                while len(matches[m]) <= k:
+                    matches[m].append("NA")
             else:
-                matches[m] = [dist.idxmin()]
+                matches[m] = keep_ids.tolist()
 
             # Matches are made without replacement
-            g2 = g2.drop(matches[m])
+            if not replace:
+                g2 = g2.drop(matches[m])
 
         # Prettify the results by consolidating into a DataFrame
         matches = pd.DataFrame.from_dict(matches, orient="index")
@@ -121,7 +132,7 @@ class PSMatch(object):
         # Extract data only for treated cases and matched controls
         matched_data = get_matched_data(matches, self.df)
         print("DONE!")
-        write_data(self.file, self.df)
+        write_matched_data(self.path, self.df)
 
         # Assign the matches and matched_data attributes to the Match object
         self.matches = matches
@@ -142,7 +153,7 @@ class PSMatch(object):
         # Get variables of interest for analysis
         variables = self.df.columns.tolist()[0:-2]
         results = {}
-        print()
+        print("Evaluating matches ...")
 
         # Evaluate case/control match for each variable of interest
         for var in variables:
@@ -152,22 +163,24 @@ class PSMatch(object):
             else:
                 p_val = calc_chi2_2xC(crosstable)[1]
             results[var] = p_val
-            print("\t\t" + var, end = "")
+            print("\t" + var, end = "")
             if p_val < 0.05:
-                print(": FAILED!")
+                print(": FAILED")
             else:
-                print(": PASSED!")
+                print(": PASSED")
 
         if True in [i < 0.05 for i in results.values()]:
-            print("\n\t\tAt least one variable failed to match!")
+            print("\nAt least one variable failed to match!")
             return False
         else:
-            print("\n\t\tAll variables were successfully matched!")
+            print("\nAll variables were successfully matched!")
             return True
 
 
-
-
+    def run(self, **kwargs):
+        self.prepare_data()
+        self.match()
+        self.evaluate()
 
 
 
