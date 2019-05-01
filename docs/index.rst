@@ -56,6 +56,7 @@ Usage
 
 .. code-block:: py
 
+   >>> # Instantiate PSMatch object
    >>> m = PSMatch(path, model, k)
    
    >>> # Calculate propensity scores and prepare data for matching
