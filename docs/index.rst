@@ -10,6 +10,10 @@ PSMatching
 .. image:: https://coveralls.io/repos/github/rlirey/psmatching/badge.svg?branch=master
    :target: https://coveralls.io/github/rlirey/psmatching?branch=master
    :alt: Coverage Status
+   
+.. image:: https://readthedocs.org/projects/psmatching/badge/?version=latest
+   :target: https://psmatching.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
 
 Ryan L. Irey, M.A., M.S.
