@@ -34,7 +34,7 @@ Technology
 ``psmatching`` uses a number of open source projects to work properly:
 
 
-* _``pandas`` <https://pandas.pydata.org/>
+* `\ ``pandas``_ <https://pandas.pydata.org/>_.`
 * `\ ``numpy`` <https://www.numpy.org/>`_
 * `\ ``scipy`` <https://www.scipy.org/>`_
 * `\ ``statsmodels`` <https://www.statsmodels.org/stable/index.html>`_
