@@ -2,7 +2,7 @@ import psmatching.match as psm
 import pytest
 
 
-file = "simMATCH.csv"
+file = "/Users/ireyx001/GoogleDrive/IHI/PAC/code/simMATCH.csv"
 model = "CASE ~ AGE + TOTAL_YRS"
 k = "3"
 
@@ -28,8 +28,8 @@ def test_match():
     assert not m.matched_data.empty
 
 
-# def test_eval():
-#     global m
-#     m.prepare_data()
-#     m.match()
-#     assert m.evaluate()
+def test_eval():
+    global m
+    m.prepare_data()
+    m.match()
+    assert m.evaluate()
