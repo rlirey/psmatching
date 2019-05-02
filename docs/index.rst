@@ -30,17 +30,6 @@ The following functionality is included in the package:
 * Matching with or without replacement
 * Evaluation of the matching process using statistical methods
 
-Technology
-^^^^^^^^^^
-
-``psmatching`` requires a number of open source projects to work properly:
-
-* `Pandas <https://pandas.pydata.org/>`_
-* `Numpy <https://www.numpy.org/>`_
-* `Scipy <https://www.scipy.org/>`_
-* `StatsModels <https://www.statsmodels.org/stable/index.html>`_
-
-``psmatching`` itself is open source with a `public repository <https://github.com/rlirey/psmatching>`_ on GitHub.
 
 Installation
 ^^^^^^^^^^^^
