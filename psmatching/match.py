@@ -133,6 +133,7 @@ class PSMatch(object):
         matched_data = get_matched_data(matches, self.df)
         print("DONE!")
         write_matched_data(self.path, self.df)
+        write_matched_case(self.path, matches)
 
         # Assign the matches and matched_data attributes to the Match object
         self.matches = matches
