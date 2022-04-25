@@ -166,9 +166,10 @@ class PSMatch(object):
             results[var] = p_val
             print("\t" + var, end = "")
             if p_val < 0.05:
-                print(": FAILED")
+                print(": FAILED, ", end="")
             else:
-                print(": PASSED")
+                print(": PASSED, ", end="")
+            print("P-Value: ", p_val)
 
         if True in [i < 0.05 for i in results.values()]:
             print("\nAt least one variable failed to match!")

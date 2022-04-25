@@ -3,7 +3,7 @@ import pytest
 
 
 path = "simMATCH.csv"
-model = "CASE ~ AGE + TOTAL_YRS"
+model = "CASE ~ AGE + GENDER + TOTAL_YRS"
 k = "3"
 
 m = psm.PSMatch(path, model, k)
