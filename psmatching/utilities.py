@@ -154,3 +154,20 @@ def write_matched_data(path, df):
     df.to_csv(save_file, index = False)
     print("DONE!")
     print()
+
+def write_matched_case(path, df):
+    '''
+        Writes matched case to file.
+
+        Parameters
+        ----------
+        path : string
+            a file path used to derive the saved file path
+        df : Pandas Dataframe
+            the dataframe to be written to file.
+        '''
+    print("Writing matched cas to file ...", end=" ")
+    save_file = path.split(".")[0] + "_matched_case.csv"
+    df.to_csv(save_file, index=False)
+    print("DONE!")
+    print()

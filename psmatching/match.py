@@ -133,6 +133,7 @@ class PSMatch(object):
         matched_data = get_matched_data(matches, self.df)
         print("DONE!")
         write_matched_data(self.path, self.df)
+        write_matched_case(self.path, matches)
 
         # Assign the matches and matched_data attributes to the Match object
         self.matches = matches
@@ -165,9 +166,10 @@ class PSMatch(object):
             results[var] = p_val
             print("\t" + var, end = "")
             if p_val < 0.05:
-                print(": FAILED")
+                print(": FAILED, ", end="")
             else:
-                print(": PASSED")
+                print(": PASSED, ", end="")
+            print("P-Value: ", p_val)
 
         if True in [i < 0.05 for i in results.values()]:
             print("\nAt least one variable failed to match!")
